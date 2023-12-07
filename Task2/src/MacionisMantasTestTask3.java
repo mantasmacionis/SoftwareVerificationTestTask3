@@ -107,7 +107,7 @@ public class MacionisMantasTestTask3 {
           assertThrows(IllegalArgumentException.class, () ->
                       new Rate(CarParkKind.STAFF, BigDecimal.TEN, BigDecimal.TEN, normalPeriods, reducedPeriods));
           }
-
+      //new tests and changes below
       @Test
       void calculateVisitorRate() {
           Rate rate = new Rate(CarParkKind.VISITOR, BigDecimal.TEN, BigDecimal.valueOf(5), new ArrayList<>(), new ArrayList<>());
@@ -115,6 +115,14 @@ public class MacionisMantasTestTask3 {
 
           assertEquals(BigDecimal.valueOf(12.5), rate.calculate(period));
           }
+    //new test
+    @Test
+    void calculateManagementRate() {
+        Rate rate = new Rate(CarParkKind.MANAGEMENT, BigDecimal.TEN, BigDecimal.valueOf(7), new ArrayList<>(), new ArrayList<>());
+        Period period = new Period(8, 15);
+
+        assertEquals(BigDecimal.valueOf(5), rate.calculate(period));
+    }
 
       @Test
       void calculateNormalRate() {
