@@ -110,8 +110,8 @@ public class MacionisMantasTestTask3 {
 
       @Test
       void calculateVisitorRate() {
-              Rate rate = new Rate(CarParkKind.VISITOR, BigDecimal.TEN, BigDecimal.valueOf(5), new ArrayList<>(), new ArrayList<>());
-              Period period = new Period(10, 15);
+          Rate rate = new Rate(CarParkKind.VISITOR, BigDecimal.TEN, BigDecimal.valueOf(5), new ArrayList<>(), new ArrayList<>());
+          Period period = new Period(10, 15);
 
           assertEquals(BigDecimal.ZERO, rate.calculate(period));
           }
@@ -162,7 +162,7 @@ public class MacionisMantasTestTask3 {
 }
 
 //RATE CLASS BELOW
-
+///////////////////////////////////////////////////////////////////////////////////
 
 
  class Rate {
@@ -242,7 +242,7 @@ public class MacionisMantasTestTask3 {
 
 
 //PERIOD CLASS BELOW
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
  class Period {
@@ -290,6 +290,7 @@ public class MacionisMantasTestTask3 {
 
 
 //CarParkKind CLASS BELOW
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 enum CarParkKind {
  STAFF, STUDENT, MANAGEMENT, VISITOR
