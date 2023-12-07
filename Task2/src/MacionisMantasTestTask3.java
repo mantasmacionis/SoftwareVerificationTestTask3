@@ -116,6 +116,16 @@ public class MacionisMantasTestTask3 {
           assertEquals(BigDecimal.valueOf(12.5), rate.calculate(period));
           }
     //new test
+
+    //new test
+    @Test
+    void calculateStudentRate() {
+        Rate rate = new Rate(CarParkKind.STUDENT, BigDecimal.TEN, BigDecimal.valueOf(7), new ArrayList<>(), new ArrayList<>());
+        Period period = new Period(8, 15);
+
+        assertEquals(BigDecimal.valueOf(21), rate.calculate(period));
+    }
+    
     @Test
     void calculateManagementRate() {
         Rate rate = new Rate(CarParkKind.MANAGEMENT, BigDecimal.TEN, BigDecimal.valueOf(7), new ArrayList<>(), new ArrayList<>());
