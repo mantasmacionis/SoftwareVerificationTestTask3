@@ -113,7 +113,7 @@ public class MacionisMantasTestTask3 {
           Rate rate = new Rate(CarParkKind.VISITOR, BigDecimal.TEN, BigDecimal.valueOf(5), new ArrayList<>(), new ArrayList<>());
           Period period = new Period(10, 15);
 
-          assertEquals(BigDecimal.ZERO, rate.calculate(period));
+          assertEquals(BigDecimal.valueOf(12.5), rate.calculate(period));
           }
 
       @Test
